@@ -18,6 +18,7 @@ const App = () => {
         AppleHealthKit.Constants.Permissions.HeartRate,
         AppleHealthKit.Constants.Permissions.Height,
         AppleHealthKit.Constants.Permissions.BloodType,
+        AppleHealthKit.Constants.Permissions.Steps,
       ],
       write: [AppleHealthKit.Constants.Permissions.Steps],
     },
@@ -42,6 +43,18 @@ const App = () => {
       console.log('results =>', results);
       /* Samples are now collected from HealthKit */
     });
+    let options1 = {
+      startDate: new Date(2023, 0, 0).toISOString(), // optional; default now
+      includeManuallyAdded: true, // optional: default true
+    };
+
+    console.log('options1 =>', options1);
+    AppleHealthKit.getStepCount(options1, (err, results) => {
+      if (err) {
+        return;
+      }
+      console.log('getStepCount =>', results);
+    });
     AppleHealthKit.getBloodType(null, (err, results) => {
       if (err) {
         console.log('err', err);
@@ -61,7 +74,7 @@ const App = () => {
   // health end
   return (
     <View style={styles.container}>
-      <Text>AUTO SILENT</Text>
+      <Text>REACT-NATIVE-HEALTH</Text>
     </View>
   );
 };
