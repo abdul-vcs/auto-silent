@@ -8,10 +8,13 @@
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest",
-    "clean": "rm -rf node_modules && rm -rf yarn.lock && cd ios && rm -rf Pods && rm -rf Podfile.lock && cd .. && cd android && rm -rf build && cd app && rm -rf build && cd .. && cd .."
+    "clean": "rm -rf node_modules && rm -rf yarn.lock && cd ios && rm -rf Pods && rm -rf Podfile.lock && cd .. && cd android && rm -rf build && cd app && rm -rf build && cd .. && cd ..",
+    "generate_apk": "cd android && ./gradlew app:assembleRelease"
   },
   "dependencies": {
     "@react-native-community/geolocation": "^3.0.4",
+    "@react-native-firebase/app": "^17.3.2",
+    "@react-native-firebase/messaging": "^17.3.2",
     "react": "18.2.0",
     "react-native": "0.71.0",
     "react-native-health": "^1.13.6",

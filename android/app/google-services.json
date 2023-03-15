@@ -1,0 +1,118 @@
+{
+  "project_info": {
+    "project_number": "780350786428",
+    "project_id": "ecomandroid-f5e7e",
+    "storage_bucket": "ecomandroid-f5e7e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:780350786428:android:75532dd1fd15d9698a72f9",
+        "android_client_info": {
+          "package_name": "com.autosilentapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "780350786428-uq01eb7l4jipmik5ohdfrmadgj0sjaru.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDewEUSDXhyPgGXeZwtyWwbYI3a8DqrMPg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "780350786428-uq01eb7l4jipmik5ohdfrmadgj0sjaru.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "780350786428-0g8f29kdd985o3hrqll6ur3i2s1dvgp8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.axlr.ecom"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:780350786428:android:ccafdfc3a39fef4b8a72f9",
+        "android_client_info": {
+          "package_name": "com.axlr.testaxlr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "780350786428-uq01eb7l4jipmik5ohdfrmadgj0sjaru.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDewEUSDXhyPgGXeZwtyWwbYI3a8DqrMPg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "780350786428-uq01eb7l4jipmik5ohdfrmadgj0sjaru.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "780350786428-0g8f29kdd985o3hrqll6ur3i2s1dvgp8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.axlr.ecom"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:780350786428:android:a48a3ed7f5967f1c8a72f9",
+        "android_client_info": {
+          "package_name": "com.ecom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "780350786428-uq01eb7l4jipmik5ohdfrmadgj0sjaru.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDewEUSDXhyPgGXeZwtyWwbYI3a8DqrMPg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "780350786428-uq01eb7l4jipmik5ohdfrmadgj0sjaru.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "780350786428-0g8f29kdd985o3hrqll6ur3i2s1dvgp8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.axlr.ecom"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

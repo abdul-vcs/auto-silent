@@ -1,5 +1,7 @@
 //import liraries
 import React, {Component, useEffect, useState} from 'react';
+import messaging from '@react-native-firebase/messaging';
+
 import {View, Text, StyleSheet} from 'react-native';
 import Geolocation from '@react-native-community/geolocation';
 import {Vibration} from 'react-native';
@@ -21,6 +23,7 @@ const App = () => {
   // Start watching the user's location
   const {mode, setMode, error} = useRingerMode();
   const [events, setEvents] = useState([]);
+  const [fcmTokenValue, setFcmTokenValue] = useState(null);
   function deg2rad(deg) {
     return deg * (Math.PI / 180);
   }
@@ -119,8 +122,16 @@ const App = () => {
         console.log('error', error);
       },
     );
+
+  const fcmToken = async () => {
+    let token = await messaging().getToken();
+    console.log('TOKEM==<>', token);
+    setFcmTokenValue(token ?? null);
+  };
+
   useEffect(() => {
-    demo();
+    fcmToken();
+    // demo();
     // initBackgroundFetch();
   }, []);
   const modeText = {
@@ -130,12 +141,19 @@ const App = () => {
   };
   return (
     <View style={styles.container}>
-      <Text>AUTO SILENT</Text>
-      <Text>Ringer Mode: {mode !== undefined ? modeText[mode] : null}</Text>
+      <Text style={styles.title}>SAMPLE NOTIFICATION</Text>
+      <Text style={styles.tokenValue}>TOKEN :: {fcmTokenValue}</Text>
       <View>
         <Text>{error?.message}</Text>
       </View>
     </View>
+    // <View style={styles.container}>
+    //   <Text>AUTO SILENT</Text>
+    //   <Text>Ringer Mode: {mode !== undefined ? modeText[mode] : null}</Text>
+    //   <View>
+    //     <Text>{error?.message}</Text>
+    //   </View>
+    // </View>
   );
 };
 
@@ -146,6 +164,18 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'lightgreen',
+    paddingHorizontal: 10,
+  },
+  title: {
+    fontSize: 20,
+    fontWeight: '700',
+    color: 'black',
+    marginBottom: 10,
+  },
+  tokenValue: {
+    fontSize: 15,
+    fontWeight: '500',
+    color: 'black',
   },
 });
 
